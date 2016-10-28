@@ -1,0 +1,10 @@
+CACHE MANIFEST
+./css/style.css
+./js/script.js
+./index.html
+
+NETWORK:
+./images/images_01.png
+
+FALLBACK:
+./index.html ./offline.html
