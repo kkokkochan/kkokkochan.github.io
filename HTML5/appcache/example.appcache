@@ -7,4 +7,4 @@ NETWORK:
 ./images/images_01.png
 
 FALLBACK:
-/HTML5/ ./offline.html
+./online.html ./offline.html
