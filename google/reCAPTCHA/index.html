@@ -5,7 +5,7 @@
     <title>Google reCAPTCHA Test</title>
     <script src='https://www.google.com/recaptcha/api.js'></script>
     <script type="text/javascript">
-        function get_action(form) {
+        document.getelementbyid("submit").click() = function (this) {
             var v = grecaptcha.getResponse();
             if(v.length == 0) {
                 document.getElementById('captcha').innerHTML = "You can't leave Captcha Code empty";
@@ -19,9 +19,9 @@
 </head>
 <body>
 <form action="/" method="POST">
-    <div class="g-recaptcha" id="rcaptcha" style="margin-left: 40px;" data-sitekey="6LfHpwoUAAAAAKwHeRbEMLMclePzO2YCs4KQv7_P"></div>
-    <span id="captcha" style="margin-left:50px;color:red" />
-    <input type="button" value="인증확인" onclick="get_action(this)"/>
+    <div class="g-recaptcha" id="rcaptcha" data-sitekey="6LfHpwoUAAAAAKwHeRbEMLMclePzO2YCs4KQv7_P"></div>
+    <span id="captcha" style="color:red" />
+    <input type="button" id="submit" value="인증확인"/>
 </form>
 </body>
 </html>
