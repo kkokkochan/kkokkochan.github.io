@@ -5,16 +5,18 @@
     <title>Google reCAPTCHA Test</title>
     <script src='https://www.google.com/recaptcha/api.js'></script>
     <script type="text/javascript">
-        document.getElementById("excute").onclick = function(form) {
-            var v = grecaptcha.getResponse();
-            if(v.length == 0) {
-                document.getElementById('captcha').innerHTML = "You can't leave Captcha Code empty";
-                return false;
-            }else if(v.length != 0) {
-                document.getElementById('captcha').innerHTML="Captcha completed";
-                return true;
+        window.onload = function() {
+            document.getElementById("excute").onclick = function () {
+                var v = grecaptcha.getResponse();
+                if (v.length == 0) {
+                    document.getElementById('captcha').innerHTML = "You can't leave Captcha Code empty";
+                    return false;
+                } else if (v.length != 0) {
+                    document.getElementById('captcha').innerHTML = "Captcha completed";
+                    return true;
+                }
             }
-        };
+        }
     </script>
 </head>
 <body>
