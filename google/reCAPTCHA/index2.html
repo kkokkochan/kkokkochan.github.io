@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Google reCAPTCHA Test</title>
-
     <script type="text/javascript">
-
         var onloadCallback = function() {
             greCAPTCHA.render('html_element', {
                 'sitekey' : '6LfHpwoUAAAAAKwHeRbEMLMclePzO2YCs4KQv7_P',
                 'theme' : 'light'
             });
-
         };
     </script>
 </head>
 <body>
-<form name="login" action="./index.html" method="POST">
+<form action="/" method="POST">
     <div id="html_element" ></div>
 </form>
-<script src="https://www.google.com/reCAPTCHA/api.js?onload=onloadCallback&render=explicit"async defer></script>
+<script src="https://www.google.com/reCAPTCHA/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+</script>
 </body>
 </html>
