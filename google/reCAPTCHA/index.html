@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <title>Google reCAPTCHA Test</title>
     <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script>
+        function get_action(form) {
+            var v = grecaptcha.getResponse();
+            if(v.length == 0) {
+                document.getElementById('captcha').innerHTML="You can't leave Captcha Code empty";
+                return false;
+            }
+            
+            if(v.length != 0) {
+                document.getElementById('captcha').innerHTML="Captcha completed";
+                return true;
+            }
+        }
+    </script>
+
 </head>
 <body>
 <form name="login" action="./index.html" method="POST">
     <div class="g-recaptcha" data-sitekey="6LfHpwoUAAAAAKwHeRbEMLMclePzO2YCs4KQv7_P"></div>
-    <input type="submit" value="인증하기">
+    <span id="captcha" style="margin-left:100px;color:red" />
 </form>
 </body>
 </html>
