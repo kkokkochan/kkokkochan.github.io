@@ -11,7 +11,7 @@
                 document.getElementById('captcha').innerHTML="You can't leave Captcha Code empty";
                 return false;
             }
-            
+
             if(v.length != 0) {
                 document.getElementById('captcha').innerHTML="Captcha completed";
                 return true;
@@ -22,7 +22,7 @@
 </head>
 <body>
 <form name="login" action="./index.html" method="POST">
-    <div class="g-recaptcha" data-sitekey="6LfHpwoUAAAAAKwHeRbEMLMclePzO2YCs4KQv7_P"></div>
+    <div class="g-recaptcha" id="rcaptcha" style="margin-left: 90px;" data-sitekey="6LfHpwoUAAAAAKwHeRbEMLMclePzO2YCs4KQv7_P"></div>
     <span id="captcha" style="margin-left:100px;color:red" />
 </form>
 </body>
