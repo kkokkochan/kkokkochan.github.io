@@ -1,9 +1,10 @@
 CACHE MANIFEST
-./css/style.css
+CACHE:
 ./js/script.js
 ./index.html
 
 NETWORK:
+./css/style.css
 ./images/images_01.png
 
 FALLBACK:
